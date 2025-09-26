@@ -25,18 +25,18 @@ for ENTRY in "${PAIRS[@]}"; do
 
     ##### Accuracy, activation, and contribution statistics
     ## Required for other analysis scripts!
-    # ${CONDA} run -n ${CONDA_ENV_NAME} --no-capture-output \
-    #   python3 -um fact.analysis.analysis \
-    #     --exp_name ${EXPNAME} --method ${IMPL} \
-    #     --layer ${LAYER} --arch ${ARCH} --nr_concepts ${K} --sparsity ${ALPHA} \
-    #     --lr ${LR} --bcos_layers --download v0.1
+    ${CONDA} run -n ${CONDA_ENV_NAME} --no-capture-output \
+      python3 -um fact.analysis.analysis \
+        --exp_name ${EXPNAME} --method ${IMPL} \
+        --layer ${LAYER} --arch ${ARCH} --nr_concepts ${K} --sparsity ${ALPHA} \
+        --lr ${LR} --bcos_layers --download v0.1
     
     ##### Concept Consistency
     # ${CONDA} run -n ${CONDA_ENV_NAME} --no-capture-output \
     #   python3 -um fact.analysis.dino_consistency \
     #     --method ${IMPL} --exp_name ${EXPNAME} \
     #     --layer ${LAYER} --arch ${ARCH} --nr_concepts ${K} --sparsity ${ALPHA} \
-    #     --lr ${LR} --bcos_layers --quantile_per_concept 0.95 # i.e Top 5%
+    #     --lr ${LR} --bcos_layers --download v0.1 --quantile_per_concept 0.95 # i.e Top 5%
     
     ##### Visualize Concepts
     ${CONDA} run -n ${CONDA_ENV_NAME} --no-capture-output \
