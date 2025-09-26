@@ -1,4 +1,4 @@
 # FaCT
 FaCT: Faithful Concept Traces for Explaining Neural Network Decisions (NeurIPS 2025)
 
-Both code and arxiv version will be released in the coming days! stay tuned!
+Arxiv version, together with the code and Huggingface models will all be released in the coming days! stay tuned!
