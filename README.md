@@ -57,7 +57,7 @@ All of the sample commands for this section (i.e model performance evaluation, c
 
 ## Evaluating Performance, Collecting Statistics
 
-The `fact.panalysis.analysis` evaluates the model accuracy and also collects activation and contribution statistics of concepts (also over the test set), that would be required for the other evaluations below.
+The `fact.analysis.analysis` evaluates the model accuracy and also collects activation and contribution statistics of concepts (also over the test set), that would be required for the other evaluations below.
 
 ## Evaluating Concept Consistency
 
