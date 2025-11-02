@@ -1,0 +1,9 @@
+dictionary-learning==0.1.0
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch==2.6
+torchvision==0.21
+numpy
+imageio
+matplotlib
+rich
+tqdm

@@ -28,7 +28,7 @@ from fact.training.saes import load_SAE
 
 from torchvision.models import resnet50 as standard_r50
 from torchvision.models import ResNet50_Weights
-from craft.craft.craft_torch import Craft
+
 
 method_labels = {
     'BiasFreeTopK': 'Our Concepts',
@@ -303,6 +303,8 @@ def std_concept_stats(args):
         args.nr_concepts == 0 and \
         args.method in ('craft', 'crp')
     if args.method == 'craft':
+        # You need to clone CRAFT and put it in the repository
+        from craft.craft.craft_torch import Craft
         per_class = True
     batch_size=16; chunk_size=60;
     
@@ -354,6 +356,7 @@ def std_concept_stats(args):
                 forward_context = nullcontext
                 per_class=False
                 cls_datasets[-1] = val_dataset
+                # You need to clone CRP and put it in the repository
                 from crp.crp.attribution import CondAttribution
                 from crp.crp.helper import get_layer_names
                 from zennit.composites import EpsilonPlusFlat

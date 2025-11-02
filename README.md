@@ -30,7 +30,9 @@ NeurIPS 2025
 # Setup
 ```bash
 git clone https://github.com/m-parchami/FaCT.git
-conda env create -f environment.yml -n fact
+conda create --name fact python=3.10
+conda activate fact
+pip install -r requirements.txt
 ```
 You can then either activate run `conda activate fact` before every script, or replace the CONDA variable in the script and point it towards the installed binary.
 
