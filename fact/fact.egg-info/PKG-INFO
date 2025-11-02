@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: fact
+Version: 0.1.0
+Summary: FaCT Package
+Author-email: Amin Parchami <amin[dot symbol]parchami [at symbol] mpi-inf.mpg.de>
+License-Expression: Apache 2.0
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown

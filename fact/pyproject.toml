@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fact"
+version = "0.1.0"
+description = "FaCT Package"
+authors = [
+  { name="Amin Parchami", email="amin.parchami@mpi-inf.mpg.de" }
+]
+readme = "README.md"
+license = "Apache 2.0"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
