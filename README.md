@@ -60,11 +60,15 @@ All of the sample commands for this section (i.e model performance evaluation, c
 The `fact.analysis.analysis` evaluates the model accuracy and also collects activation and contribution statistics of concepts (over the test set). The statistics are required for the other evaluations below.
 
 ## Evaluating Concept Consistency (C2-Score)
+<img width="2281" height="820" alt="image" src="https://github.com/user-attachments/assets/ce1a8967-1cfa-438b-ab1a-6bd0fad8d27e" />
 
-Using `fact.analysis.dino_consistency` you can measure how consistent the top-X % of the concepts are. Our metric uses DINOv2 features and upsamples them with [LoftUP](https://github.com/andrehuang/loftup). You can in principle replace both the model and up-sampler with other alternatives if you wish. 
+Using `fact.analysis.dino_consistency` you can measure how consistent the top-X % of the concepts are. Our metric uses DINOv2 features and upsamples them with [LoftUP](https://github.com/andrehuang/loftup). You can either install LoftUP as a package, or have a clone of their repo in the root directory. In principle, you can replace both the foundation model and up-sampler with other alternatives if you wish, as long as they perform well on semantic correpondence tasks.
+
 
 ## Visualizing Concepts and Decision Making
-You can use `fact.analysis.plot_inference` to either visualize concepts or visualize the decision making, by measuring concept contributions. There are examples for both provided in the main function of `fact.analysis.plot_inference`. This code also relies on the statistics from the above, to know which images activate the concepts highest, in order to visualize them.
+<img width="1648" height="818" alt="image" src="https://github.com/user-attachments/assets/3e931ae6-8e5b-46c7-9226-f08c8a1dd3c7" />
+
+You can use `fact.plotting.plot_inference` to either visualize concepts or visualize the decision making, by measuring concept contributions. There are examples for both provided in the main function of `fact.plotting.plot_inference`. This code also relies on the statistics from the above, to know which images activate the concepts highest.
 
 
 I'd more than happy to help you with any questions you have regarding the implementation or the paper :) Simply create an issue here or write me an email.
