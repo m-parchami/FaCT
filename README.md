@@ -62,7 +62,7 @@ The `fact.analysis.analysis` evaluates the model accuracy and also collects acti
 ## Evaluating Concept Consistency (C2-Score)
 <img width="2281" height="820" alt="image" src="https://github.com/user-attachments/assets/ce1a8967-1cfa-438b-ab1a-6bd0fad8d27e" />
 
-Using `fact.analysis.dino_consistency` you can measure how consistent the top-X % of the concepts are. Our metric uses DINOv2 features and upsamples them with [LoftUP](https://github.com/andrehuang/loftup). You can either install LoftUP as a package, or have a clone of their repo in the root directory. In principle, you can replace both the foundation model and up-sampler with other alternatives if you wish, as long as they perform well on semantic correpondence tasks.
+Using `fact.analysis.dino_consistency` you can measure how consistent the top-X % activations of the concepts are. Our metric uses DINOv2 features and upsamples them with [LoftUP](https://github.com/andrehuang/loftup). You can either install LoftUP as a package, or have a clone of their repo in the root directory. In principle, you can replace both the foundation model and up-sampler with other alternatives if you wish, as long as they perform well on semantic correpondence tasks.
 
 
 ## Visualizing Concepts and Decision Making
