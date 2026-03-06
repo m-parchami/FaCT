@@ -27,6 +27,9 @@ NeurIPS 2025
 <img width="1826" height="686" alt="grafik" src="https://github.com/user-attachments/assets/ca85c466-c082-493a-8dd7-f6c35393ff59" />
 
 
+
+**[Update]** We have now added a minimal and [standalone implementation](https://github.com/m-parchami/FaCT/tree/main/C2Score-minimal) of our concept-consistency metric ([C2-Score](https://github.com/m-parchami/FaCT?tab=readme-ov-file#evaluating-concept-consistency-c2-score)), which you can easily port to your own codebase.
+
 # Setup
 ```bash
 git clone https://github.com/m-parchami/FaCT.git
@@ -61,6 +64,8 @@ The `fact.analysis.analysis` evaluates the model accuracy and also collects acti
 
 ## Evaluating Concept Consistency (C2-Score)
 <img width="2281" height="820" alt="image" src="https://github.com/user-attachments/assets/ce1a8967-1cfa-438b-ab1a-6bd0fad8d27e" />
+
+**[Update]**  We have now added a minimal and [standalone implementation](https://github.com/m-parchami/FaCT/tree/main/C2Score-minimal) of our concept-consistency metric (C2-Score), which you can easily port to your own codebase.
 
 Using `fact.analysis.dino_consistency` you can measure how consistent the top-X % activations of the concepts are. Our metric uses DINOv2 features and upsamples them with [LoftUP](https://github.com/andrehuang/loftup). You can either install LoftUP as a package, or have a clone of their repo in the root directory. You can also use any other upsampler, e.g. [AnyUP](https://github.com/wimmerth/anyup?tab=readme-ov-file#use-anyup-to-upsample-your-features). In principle, you can replace both the foundation model and up-sampler with other alternatives if you wish, as long as they perform well on semantic correpondence tasks.
 
